@@ -22,10 +22,11 @@ async function getData() {
 
 function displayMedia() {
   const mediaPage = document.querySelector('.media_page');
+  mediaPage.innerHTML = '';
 
-  media.forEach((item) => {
+  media.forEach((item, index) => {
     const mediaProfil = mediaFactory(item);
-    const userCardDOM = mediaProfil.getUserCardDOM();
+    const userCardDOM = mediaProfil.getUserCardDOM(index);
     mediaPage.appendChild(userCardDOM);
   });
 }
