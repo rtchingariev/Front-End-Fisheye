@@ -19,7 +19,6 @@ function mediaFactory(data) {
 
     media.src = src;
     media.setAttribute('alt', title);
-    // media.setAttribute('type', 'video/mp4');
 
     media.onclick = function () {
       mediaIndex = index;

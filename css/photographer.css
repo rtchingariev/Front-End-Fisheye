@@ -2,15 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'DM Sans', sans-serif;
 }
 
 body {
   height: 100%;
-}
-
-#contact_modal {
-  display: none;
+  font-family: 'DM Sans', sans-serif;
 }
 
 .photograph-header {
@@ -122,6 +118,10 @@ body {
 
 /* #contact_modal {} */
 
+#contact_modal {
+  display: none;
+}
+
 .modal {
   border-radius: 5px;
   background-color: #db8876;
@@ -218,14 +218,17 @@ form textarea {
   position: relative;
   overflow: hidden;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  height: 100vh;
   padding: 30px 0;
 }
 
-.lightbox__content img {
+.lightbox__content img,
+.lightbox__content video {
   width: 440px;
   height: auto;
+  object-fit: cover;
 }
 
 .leftArrow,
