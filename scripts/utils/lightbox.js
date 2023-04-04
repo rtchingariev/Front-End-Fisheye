@@ -6,7 +6,8 @@ function closeLightbox() {
 var mediaIndex = 0;
 
 function previousMedia() {
-  mediaIndex = mediaIndex - 1;
+  // mediaIndex = mediaIndex - 1;
+  mediaIndex = (mediaIndex + media.length - 1) % media.length;
   const currentMedia = media[mediaIndex];
   const div = document.getElementById('lightbox');
   div.style.display = 'block';
@@ -27,7 +28,8 @@ function previousMedia() {
 }
 
 function nextMedia() {
-  mediaIndex = mediaIndex + 1;
+  // mediaIndex = mediaIndex + 1;
+  mediaIndex = (mediaIndex + 1) % media.length;
   const currentMedia = media[mediaIndex];
   const div = document.getElementById('lightbox');
   div.style.display = 'block';

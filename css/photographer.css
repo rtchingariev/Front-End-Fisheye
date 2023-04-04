@@ -1,3 +1,11 @@
+:root {
+  --primaire: #901c1c;
+  --secondaire: #db8876;
+  --link: #901c1c;
+  --hover: #db8876;
+  --font: 'DM Sans', sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
