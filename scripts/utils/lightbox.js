@@ -3,10 +3,22 @@ function closeLightbox() {
   modal.style.display = 'none';
 }
 
+// lightbox keyboard navigation
+document.addEventListener('keydown', (event) => {
+  if (event.code.toLocaleLowerCase() === 'escape') {
+    closeLightbox();
+  }
+  if (event.code.toLocaleLowerCase() === 'arrowleft') {
+    previousMedia();
+  }
+  if (event.code.toLocaleLowerCase() === 'arrowright') {
+    nextMedia();
+  }
+});
+
 var mediaIndex = 0;
 
 function previousMedia() {
-  // mediaIndex = mediaIndex - 1;
   mediaIndex = (mediaIndex + media.length - 1) % media.length;
   const currentMedia = media[mediaIndex];
   const div = document.getElementById('lightbox');
@@ -28,7 +40,6 @@ function previousMedia() {
 }
 
 function nextMedia() {
-  // mediaIndex = mediaIndex + 1;
   mediaIndex = (mediaIndex + 1) % media.length;
   const currentMedia = media[mediaIndex];
   const div = document.getElementById('lightbox');
