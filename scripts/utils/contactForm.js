@@ -8,13 +8,6 @@ function closeModal() {
   modal.style.display = 'none';
 }
 
-// form keyboard esc close
-document.addEventListener('keydown', (event) => {
-  if (event.code.toLocaleLowerCase() === 'escape') {
-    closeModal();
-  }
-});
-
 function inputConsoleLog(event) {
   event.preventDefault();
   let firstname = document.getElementById('firstname');

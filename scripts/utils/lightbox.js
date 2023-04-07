@@ -3,19 +3,6 @@ function closeLightbox() {
   modal.style.display = 'none';
 }
 
-// lightbox keyboard navigation
-document.addEventListener('keydown', (event) => {
-  if (event.code.toLocaleLowerCase() === 'escape') {
-    closeLightbox();
-  }
-  if (event.code.toLocaleLowerCase() === 'arrowleft') {
-    previousMedia();
-  }
-  if (event.code.toLocaleLowerCase() === 'arrowright') {
-    nextMedia();
-  }
-});
-
 var mediaIndex = 0;
 
 function previousMedia() {

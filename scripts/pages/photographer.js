@@ -70,4 +70,24 @@ window.onload = function () {
   const searchParams = new URLSearchParams(window.location.search);
   photographerId = searchParams.get('id');
   init();
+
+  // lightbox keyboard navigation
+  document.addEventListener('keydown', (event) => {
+    // console.log('code', event.code);
+    if (event.code) {
+      if (event.code.toLocaleLowerCase() === 'escape') {
+        closeLightbox();
+      }
+      if (event.code.toLocaleLowerCase() === 'arrowleft') {
+        previousMedia();
+      }
+      if (event.code.toLocaleLowerCase() === 'arrowright') {
+        nextMedia();
+      }
+      // form keyboard esc close
+      if (event.code.toLocaleLowerCase() === 'escape') {
+        closeModal();
+      }
+    }
+  });
 };
